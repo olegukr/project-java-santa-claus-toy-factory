@@ -160,3 +160,5 @@ Sesión cerrada correctamente.
     - Tests de cobertura mínimo un 70% (20%)
     - El código está bien estructurado (10%)
     - Implementación de la arquitectura MVC (20%)
+
+
