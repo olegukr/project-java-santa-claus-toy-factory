@@ -5,7 +5,33 @@
 
 package org.factoriaf5.repository;
 
+import org.factoriaf5.db.IDatabase;
+import org.factoriaf5.models.BadToy;
+import org.factoriaf5.models.GoodToy;
+import org.factoriaf5.singletons.BadToyDatabaseSingleton;
+import org.factoriaf5.singletons.GoodToyDatabaseSingleton;
 
+@SuppressWarnings("rawtypes")
 public class ToyRepository {
 
+    private IDatabase db;
+
+    public void setDB(String type) {
+        // setter injection
+        if ("good_toy".equals(type))
+            this.db = GoodToyDatabaseSingleton.getInstance();
+
+        if ("bad_toy".equals(type))
+            this.db = BadToyDatabaseSingleton.getInstance();
+    }
+
+    @SuppressWarnings("unchecked")
+    public void saveGoodToy(GoodToy toy) {
+        db.save(toy);
+    }
+
+    @SuppressWarnings("unchecked")
+    public void saveBadToy(BadToy toy) {
+        db.save(toy);
+    }
 }

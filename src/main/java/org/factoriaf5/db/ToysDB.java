@@ -5,8 +5,9 @@ import java.util.List;
 import org.factoriaf5.models.BadToy;
 import org.factoriaf5.models.GoodToy;
 
+@SuppressWarnings("unused")
 public class ToysDB {
-    private List<GoodToy> goodToys;
-    private List<BadToy> badTous;
 
+    private List<GoodToy> goodToys;
+    private List<BadToy> badToys;
 }

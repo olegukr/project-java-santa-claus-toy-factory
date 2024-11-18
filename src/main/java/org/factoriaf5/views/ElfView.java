@@ -3,7 +3,6 @@ package org.factoriaf5.views;
 import org.factoriaf5.controllers.ToyController;
 import org.factoriaf5.dto.BadToyDto;
 import org.factoriaf5.dto.GoodToyDto;
-import static org.factoriaf5.views.View.scanner;
 
 
 public class ElfView extends View {
