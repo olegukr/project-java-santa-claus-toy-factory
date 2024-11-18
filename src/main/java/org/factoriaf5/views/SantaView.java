@@ -1,5 +1,15 @@
 package org.factoriaf5.views;
 
-public class SantaView {
+import org.factoriaf5.controllers.ToyController;
+
+public class SantaView extends View{
+
+    
+        private static final ToyController controller = new ToyController();
+        
+        static void index() {
+
+            // Santa menu
+    }
 
 }

@@ -1,6 +1,5 @@
 package org.factoriaf5;
-
-import org.factoriaf5.controllers.HomeController;
+import org.factoriaf5.controllers.MainController;
 
 /**
  * Hello world!
@@ -11,6 +10,6 @@ public final class App {
 
 
     public static void main(String[] args) {
-        new HomeController();
+        new MainController();
     }
 }
