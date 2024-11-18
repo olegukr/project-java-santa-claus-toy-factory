@@ -5,7 +5,7 @@ public class MainView extends View{
     public static void index() {
 
     String menuMain = """
-        Iniciar sesión de trabajo como:
+        \nIniciar sesión de trabajo como:
         1. Elfo
         2. Santa Claus
         3. Salir
@@ -20,6 +20,7 @@ public class MainView extends View{
     }
 
     public static void quit() {
+        System.out.println("\nSesión cerrada correctamente.");
         scanner.close();
     }
 }

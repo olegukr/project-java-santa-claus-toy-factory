@@ -87,6 +87,7 @@ public class ElfView extends View {
 
 
     public static void ClouseSession() {
+        System.out.println("\nSesión cerrada correctamente.");
         MainView.index();
     }
 
