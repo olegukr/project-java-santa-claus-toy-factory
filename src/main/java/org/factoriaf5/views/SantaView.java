@@ -1,6 +1,10 @@
 package org.factoriaf5.views;
 
+import java.util.List;
+
 import org.factoriaf5.controllers.ToyController;
+import org.factoriaf5.models.BadToy;
+import org.factoriaf5.models.GoodToy;
 
 public class SantaView extends View{
 
@@ -31,12 +35,19 @@ public class SantaView extends View{
         }
 
     private static void showGoodToys() {
-        System.out.println("showGoodToys(). Not supported yet.");
+        List<GoodToy> goodToys = controller.getGoodToys();
+        for (GoodToy goodToy : goodToys) {
+            System.out.println(goodToy.toString());
+        }
     }
 
     private static void showBadToys() {
-        System.out.println("showBadToys(). Not supported yet.");
+        List<BadToy> badToys = controller.getBadToys();
+        for (BadToy badToy : badToys) {
+            System.out.println(badToy.toString());
+        }
     }
+
 
     private static void saveToysListToCSV() {
         System.out.println("saveToysListToCSV(). Not supported yet.");
