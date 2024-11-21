@@ -22,4 +22,10 @@ public class BadToy extends Toy {
         this.content = content;
     }
 
+    @Override
+    public String toString() {
+        return  id + "." +
+                " Título: " + title +
+                ", Contenido: " + content;
+    }
 }

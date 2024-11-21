@@ -1,5 +1,7 @@
 package org.factoriaf5.controllers;
 
+import java.util.List;
+
 import org.factoriaf5.dto.BadToyDto;
 import org.factoriaf5.dto.GoodToyDto;
 import org.factoriaf5.models.BadToy;
@@ -30,6 +32,18 @@ public class ToyController {
         repository.setDB("bad_toy");
         repository.saveBadToy(toy);
         ElfView.addToyResponse();
+    }
+
+    public List<GoodToy> getGoodToys() {
+        repository.setDB("good_toy");
+        List<GoodToy> goodToys = repository.getGoodToys();
+        return goodToys;
+    }
+
+    public List<BadToy> getBadToys() {
+        repository.setDB("bad_toy");
+        List<BadToy> badToys = repository.getBadToys();
+        return badToys;
     }
 
 }

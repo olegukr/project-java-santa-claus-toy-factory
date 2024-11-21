@@ -44,5 +44,14 @@ public class GoodToy extends Toy {
         this.category = category;
     }
 
+    @Override
+    public String toString() {
+        return  id + "." +
+                " Título: " + title +
+                ", Marca: " + brand +
+                ", Edad Recomendada: " + targetAge +
+                ", Categoria: " + category;
+    }
+
 }
 

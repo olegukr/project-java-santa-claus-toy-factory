@@ -5,6 +5,8 @@
 
 package org.factoriaf5.repository;
 
+import java.util.List;
+
 import org.factoriaf5.db.IDatabase;
 import org.factoriaf5.models.BadToy;
 import org.factoriaf5.models.GoodToy;
@@ -34,4 +36,15 @@ public class ToyRepository {
     public void saveBadToy(BadToy toy) {
         db.save(toy);
     }
+
+    @SuppressWarnings("unchecked")
+    public List<GoodToy> getGoodToys() {
+        return db.getToys();
+    }
+
+    @SuppressWarnings("unchecked")
+    public List<BadToy> getBadToys() {
+        return db.getToys();
+    }
 }
+

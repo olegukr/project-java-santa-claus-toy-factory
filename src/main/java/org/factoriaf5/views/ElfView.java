@@ -1,8 +1,12 @@
 package org.factoriaf5.views;
 
+import java.util.List;
+
 import org.factoriaf5.controllers.ToyController;
 import org.factoriaf5.dto.BadToyDto;
 import org.factoriaf5.dto.GoodToyDto;
+import org.factoriaf5.models.BadToy;
+import org.factoriaf5.models.GoodToy;
 
 
 public class ElfView extends View {
@@ -26,7 +30,7 @@ public class ElfView extends View {
         int option = scanner.nextInt();
 
         if (option == 1) selectChild();
-        if (option == 2) showAllTos();
+        if (option == 2) showAllToys();
         if (option == 3) deleteToy();
         if (option == 4) ClouseSession();
     }  
@@ -74,9 +78,23 @@ public class ElfView extends View {
         controller.postGoodToy(new GoodToyDto(title, brand, age, category));
     }
     
-    private static void showAllTos() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'showAllTos'");
+    private static void showGoodToys() {
+        List<GoodToy> goodToys = controller.getGoodToys();
+        for (GoodToy goodToy : goodToys) {
+            System.out.println(goodToy.toString());
+        }
+    }
+
+    private static void showBadToys() {
+        List<BadToy> badToys = controller.getBadToys();
+        for (BadToy badToy : badToys) {
+            System.out.println(badToy.toString());
+        }
+    }
+
+    private static void showAllToys() {
+        showGoodToys();
+        showBadToys();
     }
 
     private static void deleteToy() {
