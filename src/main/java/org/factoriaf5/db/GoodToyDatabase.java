@@ -17,13 +17,18 @@ public class GoodToyDatabase implements IDatabase<GoodToy>{
     public List<GoodToy> getToys() {
         return goodToys;
     }
-
+    
     @Override
     public void save(GoodToy toy) {
         goodToys.add(toy);
         System.out.println("good Toy added");
     }
 
+    @Override
+    public void delete(GoodToy toy) {
+        goodToys.remove(toy);
+        System.out.println("good Toy removed");
+    }
     private void initDB() {
         this.goodToys = new ArrayList<>(Arrays.asList(
                 new GoodToy("B1", "Batman", true, "lego", 12, "construction")));

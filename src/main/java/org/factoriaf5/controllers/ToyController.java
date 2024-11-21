@@ -46,6 +46,27 @@ public class ToyController {
         return badToys;
     }
 
+    public void deleteGoodToy(String indexString) {
+        repository.setDB("good_toy");
+        GoodToy toy =  repository.getGoodToyById(indexString);
+        repository.removeGoodToy(toy);
+    }
+
+    public void deleteBadToys(String indexString) {
+        
+        repository.setDB("bad_toy");
+        BadToy toy = repository.getBadToyById(indexString);
+        repository.removeBadToy(toy);
+    }
+
+    public BadToy getBadToyById(List<BadToy> badToys, String id) {
+        for (BadToy toy : badToys) {
+            if (toy.getId().equals(id)) {
+                return toy;
+            }
+        }
+        return null;
+    }
 }
 
 

@@ -46,5 +46,35 @@ public class ToyRepository {
     public List<BadToy> getBadToys() {
         return db.getToys();
     }
+
+    public GoodToy getGoodToyById(String indexString) {
+        for (GoodToy  toy : getGoodToys()) {
+            if (toy.getId().equals(indexString)) {
+                return toy;
+            }
+        }
+        return null;
+    }
+
+    public BadToy getBadToyById(String indexString) {
+        for (BadToy  toy : getBadToys()) {
+            if (toy.getId().equals(indexString)) {
+                return toy;
+            }
+        }
+        return null;
+    }
+    
+    @SuppressWarnings("unchecked")
+    public void removeGoodToy(GoodToy toy) {
+        db.delete(toy);
+    }
+
+    @SuppressWarnings("unchecked")
+    public void removeBadToy(BadToy toy) {
+        db.delete(toy);
+    }
 }
+
+
 

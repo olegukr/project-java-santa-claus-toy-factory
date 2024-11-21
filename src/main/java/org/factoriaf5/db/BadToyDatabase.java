@@ -24,6 +24,12 @@ public class BadToyDatabase implements IDatabase<BadToy>{
         System.out.println("bad toy added");
     }
 
+    @Override
+    public void delete(BadToy toy) {
+        badToys.remove(toy);
+        System.out.println("bad Toy removed");
+    }
+
     private void initDB() {
         this.badToys = new ArrayList<>(Arrays.asList(
                 new BadToy("M1", "Mystery Box 5x5", false, "carbón")));

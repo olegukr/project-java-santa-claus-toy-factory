@@ -1,23 +1,27 @@
 package org.factoriaf5.models;
 
 public class GoodToy extends Toy {
-
+    private static int goodToyCounter = 1;
     private String brand;
-    private int targetAge;
+    private String targetAge;
     private String category;
 
-    public GoodToy(String title, boolean isGoodToy, String brand, int targetAge, String category) {
+    public GoodToy(String title, boolean isGoodToy, String brand, String targetAge, String category) {
         super(title, isGoodToy);
         this.brand = brand;
         this.targetAge = targetAge;
         this.category = category;
+        this.id = generateId();
     }
 
-    public GoodToy(String id, String title, boolean isGoodToy, String brand, int targetAge, String category) {
+    public GoodToy(String id, String title, boolean isGoodToy, String brand, String targetAge, String category) {
         super(id, title, isGoodToy);
         this.brand = brand;
         this.targetAge = targetAge;
         this.category = category;
+    }
+    private String generateId() {
+        return "B" + (goodToyCounter++);
     }
 
     public String getBrand() {
@@ -28,11 +32,11 @@ public class GoodToy extends Toy {
         this.brand = brand;
     }
 
-    public int getTargetAge() {
+    public String getTargetAge() {
         return targetAge;
     }
 
-    public void setTargetAge(int targetAge) {
+    public void setTargetAge(String targetAge) {
         this.targetAge = targetAge;
     }
 
@@ -52,6 +56,5 @@ public class GoodToy extends Toy {
                 ", Edad Recomendada: " + targetAge +
                 ", Categoria: " + category;
     }
-
 }
 

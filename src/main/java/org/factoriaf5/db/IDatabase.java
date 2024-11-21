@@ -6,5 +6,6 @@ public interface IDatabase<E> {
 
     public void save(E entity);
     public List<E> getToys();
+    public void delete(E entity);
 
 }

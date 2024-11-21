@@ -98,8 +98,19 @@ public class ElfView extends View {
     }
 
     private static void deleteToy() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'deleteToy'");
+        System.out.println("Ingrese el identificador del juguete a eliminar: ");
+        String index = scanner.next();
+        if (index.startsWith("B")) {
+            controller.deleteGoodToy(index);
+            System.out.println("Juguete eliminado con éxito");
+
+        } else if (index.startsWith("M")) {
+            controller.deleteBadToys(index);
+            System.out.println("Juguete eliminado con éxito");
+        } else {
+            System.out.println("No existe tal identificador de juguete");
+        }
+        index();
     }
 
 

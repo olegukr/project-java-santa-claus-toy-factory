@@ -2,16 +2,22 @@ package org.factoriaf5.models;
 
 public class BadToy extends Toy {
 
+    private static int badToyCounter = 1;
     private String content;
 
     public BadToy(String title, boolean isGoodToy, String content) {
         super(title, isGoodToy);
         this.content = content;
+        this.id = generateId();
     }
 
     public BadToy(String id, String title, boolean isGoodToy, String content) {
         super(id, title, isGoodToy);
         this.content = content;
+    }
+
+    private String generateId() {
+        return "M" + (badToyCounter++);
     }
 
     public String getContent() {
@@ -28,4 +34,5 @@ public class BadToy extends Toy {
                 " Título: " + title +
                 ", Contenido: " + content;
     }
+
 }
