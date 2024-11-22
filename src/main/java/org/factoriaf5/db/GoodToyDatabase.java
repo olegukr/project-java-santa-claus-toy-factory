@@ -31,6 +31,6 @@ public class GoodToyDatabase implements IDatabase<GoodToy>{
     }
     private void initDB() {
         this.goodToys = new ArrayList<>(Arrays.asList(
-                new GoodToy("B1", "Batman", true, "lego", 12, "construction")));
+                new GoodToy("B1", "Batman", true, "lego", "12", "construction")));
     }
 }

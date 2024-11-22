@@ -36,4 +36,8 @@ public class Toy {
     public void setTitle(String title) {
         this.title = title;
     }
+
+    public boolean getIsGoodToy() {
+        return isGoodToy;
+    }
 }

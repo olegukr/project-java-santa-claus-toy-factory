@@ -5,6 +5,8 @@ public class GoodToy extends Toy {
     private String brand;
     private String targetAge;
     private String category;
+   
+    
 
     public GoodToy(String title, boolean isGoodToy, String brand, String targetAge, String category) {
         super(title, isGoodToy);

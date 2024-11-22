@@ -70,7 +70,7 @@ public class ElfView extends View {
         System.out.println("Ingrese la marca:");
         String brand = scanner.next();
         System.out.println("Ingrese la edad recomendada:");
-        int age = scanner.nextInt();
+        String age = scanner.next();
         System.out.println("Ingrese la categoria:");
         String category = scanner.next();
 

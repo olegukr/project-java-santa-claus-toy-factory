@@ -4,6 +4,7 @@ public class BadToy extends Toy {
 
     private static int badToyCounter = 1;
     private String content;
+    protected boolean isGoodToy;
 
     public BadToy(String title, boolean isGoodToy, String content) {
         super(title, isGoodToy);
