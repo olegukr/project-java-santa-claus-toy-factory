@@ -32,7 +32,7 @@ public class BadToyDatabase implements IDatabase<BadToy>{
 
     private void initDB() {
         this.badToys = new ArrayList<>(Arrays.asList(
-                new BadToy("M1", "Mystery Box 5x5", false, "carbón")));
+                new BadToy("M0", "Mystery Box 5x5", false, "carbón")));
     }
 
 }
