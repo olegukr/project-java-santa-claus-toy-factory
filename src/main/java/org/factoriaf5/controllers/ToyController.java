@@ -71,8 +71,6 @@ public class ToyController {
     public void exportToCsvFile(String filename) {
         ExportToFileCSV.exportToCsv( getGoodToys(), getBadToys(), filename);
     }
-
-
 }
 
 

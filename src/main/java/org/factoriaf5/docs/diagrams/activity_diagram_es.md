@@ -16,15 +16,14 @@ flowchart TD
     D -->|2: Ver todos los juguetes| J[Lista de juguetes] --> C
     D -->|3: Eliminar juguete| K[Ingresar ID del juguete]
     K --> L[Juguete eliminado con exito] --> C
-    D -->|4: Cerrar sesion| M[Sesion cerrada]
+    D -->|4: Cerrar sesion| M[Sesion cerrada] --> B
 
     %% Santa Claus Actions
     N --> O{Seleccionar opcion}
     O -->|1: Juguetes buenos| P[Lista de juguetes buenos] --> N
     O -->|2: Juguetes malos| Q[Lista de juguetes malos] --> N
     O -->|3: Guardar lista| R[Lista guardada] --> N
-    O -->|4: Cerrar sesion| S[Sesion cerrada]
+    O -->|4: Cerrar sesion| S[Sesion cerrada] --> B
 
     %% Exit Points
-    M --> T[End]
-    S --> T[End]
+    B --> T[End]

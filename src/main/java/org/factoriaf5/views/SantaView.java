@@ -69,13 +69,15 @@ public class SantaView extends View{
                     } catch (Exception e) {
                         System.err.println("Error saving file: " + e.getMessage());
                     }
-                    break;
+                    return; // Exit after saving to Santa menu
+                    
                 } else if (choice.equalsIgnoreCase("exit")) {
                     break;
                 } else {
                     System.out.println("Please provide a different file name.");
                 }
             } else {
+
                 // File does not exist, create and save it
                 try {
                     controller.exportToCsvFile(filename);
@@ -86,11 +88,10 @@ public class SantaView extends View{
                 break; // Exit after saving
             }
         }
+
         System.out.println("Returning to Santa menu...");
         index();
-        
     }
-    
 
     public static void ClouseSession() {
         System.out.println("\nSesión cerrada correctamente.");
