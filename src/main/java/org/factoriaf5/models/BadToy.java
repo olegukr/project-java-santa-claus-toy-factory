@@ -1,5 +1,8 @@
 package org.factoriaf5.models;
 
+import org.factoriaf5.dto.BadToyDto;
+import org.factoriaf5.dto.GoodToyDto;
+
 public class BadToy extends Toy {
 
     private static int badToyCounter = 1;
@@ -15,6 +18,10 @@ public class BadToy extends Toy {
     public BadToy(String id, String title, boolean isGoodToy, String content) {
         super(id, title, isGoodToy);
         this.content = content;
+    }
+
+    public BadToy(BadToyDto badToyDto) {
+    this(badToyDto.title(), false, badToyDto.content());
     }
 
     private String generateId() {

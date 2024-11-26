@@ -1,5 +1,7 @@
 package org.factoriaf5.models;
 
+import org.factoriaf5.dto.GoodToyDto;
+
 public class GoodToy extends Toy {
     private static int goodToyCounter = 1;
     private String brand;
@@ -22,6 +24,11 @@ public class GoodToy extends Toy {
         this.targetAge = targetAge;
         this.category = category;
     }
+
+    public GoodToy(GoodToyDto goodToyDto) {
+    this(goodToyDto.title(), true, goodToyDto.brand(), goodToyDto.recommendedAge(), goodToyDto.category());
+    }
+
     private String generateId() {
         return "B" + (goodToyCounter++);
     }

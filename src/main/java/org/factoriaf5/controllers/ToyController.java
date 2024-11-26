@@ -21,16 +21,14 @@ public class ToyController {
     public void postGoodToy(GoodToyDto goodToyDto) {
         // hará algo con el repositorio
         // si todo ha ido bien devolverá la respuesta
-        GoodToy toy = new GoodToy(goodToyDto.title(), true, goodToyDto.brand(), goodToyDto.recommendedAge(), goodToyDto.category());
         repository.setDB("good_toy");
-        repository.saveGoodToy(toy);
+        repository.saveGoodToy(new GoodToy(goodToyDto));
         ElfView.addToyResponse();
     }
 
     public void postBadToy(BadToyDto badToyDto) {
-        BadToy toy = new BadToy(badToyDto.title(), false, badToyDto.content());
         repository.setDB("bad_toy");
-        repository.saveBadToy(toy);
+        repository.saveBadToy(new BadToy(badToyDto));
         ElfView.addToyResponse();
     }
 

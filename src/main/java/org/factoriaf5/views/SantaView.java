@@ -35,14 +35,14 @@ public class SantaView extends View{
         if (option == 4) ClouseSession();
     }
 
-    private static void showGoodToys() {
+    public static void showGoodToys() {
         List<GoodToy> goodToys = controller.getGoodToys();
         for (GoodToy goodToy : goodToys) {
             System.out.println(goodToy.toString());
         }
     }
 
-    private static void showBadToys() {
+    public static void showBadToys() {
         List<BadToy> badToys = controller.getBadToys();
         for (BadToy badToy : badToys) {
             System.out.println(badToy.toString());
