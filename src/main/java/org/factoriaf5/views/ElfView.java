@@ -95,6 +95,8 @@ public class ElfView extends View {
     public static void showAllToys() {
         showGoodToys();
         showBadToys();
+        
+        index();
     }
 
     private static void deleteToy() {
